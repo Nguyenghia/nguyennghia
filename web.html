@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="UTF -8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/jpg" href="logo.png">
+<link rel="stylesheet" href="./styles1.css" />
+</head>
+</head>
+<body>
+<h1 style="text-align:center;">Travel to Hồ Chí Minh City</h1>
+<button class="tablink" onclick="openPage('Home', this, 'black')">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'black')" id="defaultOpen">News</button>
+<button class="tablink" onclick="openPage('About', this, 'black')">About</button>
+<div id="Home" class="tabcontent">
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img class="hinh" src="images/hcm1.jpg" style="width:500px">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img class="hinh" src="images/hcm2.jpg" style="width:500px">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img class="hinh" src="images/hcm3.jpg" style="width:500px">
+    </div>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+    
+    <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    </script>
+  <h1 style="font-size: 30px;">Hồ Chí Minh City</h1>
+  <P>Ho Chi Minh City, also known by its popular old name Saigon, is the largest city in Vietnam and a megacity in the near future. This is also the center of economy, politics, culture, entertainment and education in Vietnam. Ho Chi Minh City is a centrally run city belonging to a special urban type of Vietnam. Located in the transition zone between the Southeast and the Southwest, this city currently has 16 districts, 1 city and 5 districts, with a total area of ​​2,095 km2 (809 sq mi). According to preliminary census results. In 2021, the city's population will be 9,166,800 people (9.3% of Vietnam's population), the average population density will be 4,375 people/km² (the highest in the country). However, if you include unregistered residents, the actual population of this city in 2018 is nearly 14 million people.</P>
+
+</div>
+<div id="News" class="tabcontent">
+  <h1>News</h1>
+  <h1>Lễ Hội bánh mì Việt Nam</h1>
+  <p>Lễ hội bánh mì lần thứ nhất tại TP HCM, khai mạc ngày 30/3 và diễn ra trong 4 ngày, dự kiến thu hút hơn 50.000 lượt khách tham quan.
+    Theo ghi nhận của VnExpress, hai ngày đầu của lễ hội diễn ra trong tuần nhưng lượng khách phủ kín các gian hàng. Vài lối đi chỉ rộng khoảng một sải tay, khách phải xoay người để di chuyển trong đám đông, len qua dòng người đang xếp hàng chờ mua bánh mì.Dòng người chờ vào bãi gửi xe trên đường Nguyễn Thị Minh Khai, quận 1. Các bãi gửi xe thuộc khu vực Nhà văn hóa Thanh Niên, nơi diễn ra lễ hội, cũng chật kín.</p> 
+  <p>Lễ hội quy tụ 120 gian hàng với những cái tên quen thuộc như Nguyên Sinh, Bảy Hổ, bánh mì Pew Pew, bánh mì cụ Lý, Grandma Lu, Bon Appetit. Tuy nhiên, một số tên tuổi nổi tiếng khác như Huỳnh Hoa, Như Lan, Chim Chạy không góp mặt. Các gian hàng đa dạng về loại nhân như bánh mì heo quay, thịt nướng, pate chả.</p>
+  <video align-items="center"; height="60%"; width="70%"; src="y2mate.com - tet_dong_day_kay_tran_x_nguyen_khoa_x_duck_v_x_homieboiz_sol_x_ness_mix_EL7dJimWzqw_360p.mp4" type="video/mp4"; controls autoplay></video>
+</div>
+<div id="About" class="tabcontent">
+  <left><img src="images/61771661_427233171461800_2573783684981194752_n.jpg" alt="nghia" width="350" height="280"/></left>
+  <h3>About</h3>
+  <p>Name: Nguyễn Đức Nghĩa-22560036.</p>
+  <p>Tel: 0903057741</p>
+  <P>Khoa: Computer science</P>
+  <p>Email cá nhân:<a  href="mailto:ducnghianguyen3004@gmail.com"> ducnghianguyen3004@gmail.com</a></p>
+  <p>Email SV:<a href="mailto:22560036@gm.uit.edu.vn"> 22560036@gm.uit.edu.vn</a></p>
+  <p>Facebook: <a  href="https://www.facebook.com/hachilami.nguyen";target="_blank">https://www.facebook.com/hachilami.nguyen</a></p>
+  <p>Instagram: <a  href="https://www.instagram.com/_dnghia1608_/";target="_blank">https://www.instagram.com/_dnghia1608_/</a></p>
+</div>
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+document.getElementById("defaultOpen").click();
+</script>
+<div id="footer">
+  <div class="fLeft">
+  <p>HCMC tour</p>
+  <p>Địa chỉ: <br />
+  Điện thoại: 0903057741</p>
+  <p>Email: <a href="mailto:22560036@gm.uit.edu.vn">22560036@gm.uit.edu.vn</a></p>
+</div>
+</body>
+</html>
